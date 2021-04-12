@@ -6,13 +6,13 @@ name: Build and Deploy to IKS
 on:
   push: # Execute on every push to the master branch. Merging a pull request counts as a push.
     branches:
-      - master
+      - main
   release: # Execute when a release is created on the master branch
     types:
       - created
 
 env:
-  DEPLOYMENT_NAME=seismology-staging
+  DEPLOYMENT_NAME: seismology-staging
 
 jobs:
   build-push-deploy-job:
